@@ -9,24 +9,14 @@ import { ContainerCarList, CarListWrapper } from './style';
 
 // Este componente apresenta a lista de resultados
 
-export function CarList() {
-
-    // const [list, setList] = useState();
-
-    // useEffect(()=>{
-    //     Api.get("vehicles").then(({data})=>{
-    //         setList(data);
-    //     })
-  
-    //    //eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [])   
+export function CarList() { 
     
     const { data } = useAxios('carros');
     // console.log(data);
-
+    
     return(
  
-        <ContainerCarList>   {/*  como se fosse <div className='container' */}
+        <ContainerCarList>   {/* <div className='container' */}
         
         
             <CarAdd />   {/* Add car Button that open modal of inputs */}
@@ -50,7 +40,6 @@ export function CarList() {
                     </tr>
 
                 </thead>
-
                 <tbody>
                     {data?.map((carro)=>(
                             <Car 
@@ -64,7 +53,12 @@ export function CarList() {
                                 num_portas={carro.num_portas}
                                 valor_fipe={carro.valor_fipe}
                                 cor={carro.cor}
-                                timestamp_cadastro={carro.timestamp_cadastro}
+
+                                // // data e hora
+                                // timestamp_cadastro= {(new Date(carro.timestamp_cadastro * 1000).toISOString().slice(0, 19).replace('T', ' '))} 
+
+                                // Somente a Data
+                                timestamp_cadastro= {new Date(carro.timestamp_cadastro * 1000).toLocaleDateString("pt-BR")}  
                             />
                         ))}    
 
