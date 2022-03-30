@@ -10,7 +10,6 @@ export default createGlobalStyle`
         text-align: center;
 
         font-family: 'Ubuntu', sans-serif;
-        text-decoration: none;
         -webkit-font-smoothin: none;
         -moz-osx-font-smoothing:grayscale;
         

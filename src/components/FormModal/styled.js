@@ -21,8 +21,8 @@ export const Container = styled.div`
     background: #ffffff;
     width: 100%;
     height: 100%;
-    max-width: 400px;
-    max-height: 400px;
+    max-width: 900px;
+    max-height: 500px;
     padding: 32px 48px;
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.8);
     border-radius: 20px;
@@ -43,22 +43,24 @@ export const Header = styled.header`
     color: #1e1e1e;
     background-color: transparent;
     padding: 0;
+    margin-bottom: 20px;
+    font-size: 25px;
 
-    font-size: 18px;
+    //close button
     button {
-        max-height: 25px;
+        max-height: 30px;
         background: none;
         border: none;
         cursor: pointer;
     }
 
 `;
+
 //form do modal
 export const FormContainer = styled.form`
     height: 100%;
     width: 100%;
 
-    display: flex;
     flex-direction:column;
     justify-content: space-between;
     gap: 15px;
@@ -66,9 +68,14 @@ export const FormContainer = styled.form`
 
 //conteúdo do form
 export const FormMain = styled.main`
+    max-width: 100%;
     margin: auto 0;
-    display: flex;
-    flex-direction: column;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* display: flex;
+    flex-direction: column; */
     gap: 20px;
 
 `; 
@@ -94,12 +101,15 @@ export const InputGroup = styled.div`
         height: 30px;
         width: 100%;
         padding-left: 10px;
+        text-align: left;
     }
 `;
 //conteúdo do footer do modal
 export const Footer = styled.footer`
+    height:100px;
+    
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     
     button {
         align-self: center;
@@ -115,6 +125,8 @@ export const Footer = styled.footer`
 
  
     `;
+
+    
 export const CheckIcon = styled(IoCheckmark)`
     color: white;
     width: 2.4em;

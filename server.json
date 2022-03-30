@@ -1,51 +1,112 @@
 {
   "carros": [
     {
-      "nome": "vamos correr",
-      "marca": "vamos",
-      "id": 9
-    },
-    {
-      "nome": "ca",
-      "marca": "ca",
-      "id": 10
-    },
-    {
-      "nome": "ca",
-      "marca": "ca",
-      "id": 11
-    },
-    {
-      "nome": "asdfasd",
-      "marca": "asdfasd",
-      "id": 12
-    },
-    {
-      "nome": "sadfasd",
-      "marca": "sadfasd",
-      "id": 13
-    },
-    {
-      "nome": "aefasdfasdf",
-      "marca": "asdfasdfasdfasdd",
-      "id": 14
-    }
-  ],
-  "motos": [
-    {
-      "nome": "Uno",
-      "marca": "Fiat",
-      "id": 2
+      "id": 1,
+      "marca_id": 1,
+      "marca_nome": "TOYOTA",
+      "nome_modelo": "COROLLA XEI",
+      "ano": 2016,
+      "combustivel": "flex",
+      "num_portas": 4,
+      "valor_fipe": 70,
+      "cor": "Azul",
+      "timestamp_cadastro": 1636636150
     },
     {
       "id": 3,
-      "nome": "Fiorino",
-      "marca": "Fiat"
+      "marca_id": 2,
+      "marca_nome": "FORD",
+      "nome_modelo": "Ka",
+      "ano": 2015,
+      "combustivel": "flex",
+      "num_portas": 4,
+      "valor_fipe": 50,
+      "cor": "Verde",
+      "timestamp_cadastro": 1636636150
     },
     {
-      "nome": "asdfaqs",
-      "marca": "asdfasd",
-      "id": 4
+      "id": 5,
+      "marca_id": 3,
+      "marca_nome": "VW",
+      "nome_modelo": "VOYAGE",
+      "ano": 2012,
+      "combustivel": "flex",
+      "num_portas": 4,
+      "valor_fipe": 34.4,
+      "cor": "Preta",
+      "timestamp_cadastro": 1636636150
+    },
+    {
+      "id": 7,
+      "marca_id": 4,
+      "marca_nome": "FIAT",
+      "nome_modelo": "Uno Mille",
+      "ano": 2000,
+      "combustivel": "gasolina",
+      "num_portas": 2,
+      "valor_fipe": 10.1,
+      "cor": "Branca",
+      "timestamp_cadastro": 1605100230
+    },
+    {
+      "marca_id": 5,
+      "marca_nome": "TOYOTA",
+      "nome_modelo": "COROLLA XEI",
+      "ano": 2016,
+      "combustivel": "flex",
+      "num_portas": 4,
+      "valor_fipe": 70,
+      "cor": "Azul",
+      "timestamp_cadastro": 1636636150,
+      "id": 8
+    },
+    {
+      "id": 10,
+      "marca_id": 0,
+      "nome_modelo": "COROLLA",
+      "marca_nome": "TOYOTA",
+      "ano": "2004",
+      "combustivel": "gasolina",
+      "num_portas": 2,
+      "valor_fipe": "50000",
+      "cor": "azul",
+      "timestamp_cadastro": "1641477686"
+    },
+    {
+      "marca_id": 0,
+      "marca_nome": "TOYOTA",
+      "nome_modelo": "COROLLA",
+      "ano": "2004",
+      "combustivel": "gasolina",
+      "num_portas": 2,
+      "valor_fipe": "50000",
+      "cor": "azul",
+      "timestamp_cadastro": "1641477686",
+      "id": 10
+    },
+    {
+      "marca_id": 0,
+      "marca_nome": "TOYOTA",
+      "nome_modelo": "COROLLA",
+      "ano": "2004",
+      "combustivel": "gasolina",
+      "num_portas": 2,
+      "valor_fipe": "50000",
+      "cor": "azul",
+      "timestamp_cadastro": "1641477686",
+      "id": 10
+    },
+    {
+      "marca_id": 0,
+      "marca_nome": "TOYOTA",
+      "nome_modelo": "COROLLA",
+      "ano": "2004",
+      "combustivel": "gasolina",
+      "num_portas": 2,
+      "valor_fipe": "50000",
+      "cor": "azul",
+      "timestamp_cadastro": "1641477686",
+      "id": 10
     }
   ]
 }

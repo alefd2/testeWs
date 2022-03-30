@@ -14,7 +14,7 @@ export const ContainerHeader = styled.header`
 
     strong {
         
-        font-size: 30px;
+        font-size: 50px;
     }
 
 `;

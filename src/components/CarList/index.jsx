@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import { useAxios } from '../../hooks/useAxios'
 
 import { CarAdd } from '../CarAdd'; //componente externo
@@ -23,22 +22,55 @@ export function CarList() {
     // }, [])   
     
     const { data } = useAxios('carros');
-    console.log(data);
+    // console.log(data);
 
     return(
  
         <ContainerCarList>   {/*  como se fosse <div className='container' */}
-            <CarListWrapper> {/*  como se fosse <ul>  */}
+        
+        
+            <CarAdd />   {/* Add car Button that open modal of inputs */}
+
+
+
+            <CarListWrapper> {/*  <table> */}
+            
+                <thead>
+                        
+                    <tr>
+                            <th>Nome da Marca</th>
+                            <th>Nome do Modelo</th>
+                            <th>Ano</th>
+                            <th>Combustível</th>
+                            <th>Num. Portas</th>
+                            <th>Valor Fipe</th>
+                            <th>Cor</th>
+                            <th>Data do Cadastro</th>
+                            <th>Ações</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+                    {data?.map((carro)=>(
+                            <Car 
+                                key={carro.id} //key default of react
+                                id={carro.id}
+                                marca_id={carro.marca_id}
+                                marca_nome={carro.marca_nome}
+                                nome_modelo={carro.nome_modelo}
+                                ano={carro.ano}
+                                combustivel={carro.combustivel}
+                                num_portas={carro.num_portas}
+                                valor_fipe={carro.valor_fipe}
+                                cor={carro.cor}
+                                timestamp_cadastro={carro.timestamp_cadastro}
+                            />
+                        ))}    
+
+                </tbody>
                 
-                <CarAdd />   {/*  como se fosse as <li> retornadas */}
-                {data?.map((carro)=>(
-                    <Car 
-                        key={carro.id}
-                        id={carro.id}
-                        nome={carro.nome}
-                        marca={carro.marca}
-                    />
-                ))}      
+  
                 
             </CarListWrapper>
         </ContainerCarList>
