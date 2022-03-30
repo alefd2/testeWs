@@ -20,11 +20,11 @@ export default function FormModal(){
 
     const {handleClose, 
            handleSubmit,
-           modelo, modeloHandler,
-           marca, marcaHandler,
+           nome_modelo, modeloHandler,
+           marca_nome, marcaHandler,
            ano , anoHandler,
            combustivel, combustivelHandler, 
-           portas, portasHandler, 
+           num_portas, portasHandler, 
            valor_fipe , fipeHandler, 
            cor, corHandler
          } = useContext(CarContext)
@@ -45,7 +45,7 @@ export default function FormModal(){
                         <label htmlFor="nome_modelo">Nome do Modelo</label>
                         <input  id="nome_modelo" 
                                 type="text" 
-                                value={modelo} 
+                                value={nome_modelo} 
                                 placeholder="COROLA" 
                                 onChange={modeloHandler} 
                         />
@@ -53,14 +53,29 @@ export default function FormModal(){
 
                         <InputGroup>
                             <label htmlFor="marca_nome">Nome da Marca</label>
+                            <select id="marca_nome" value={marca_nome} onChange={marcaHandler}>
+                                <option value="TOYOTA">TOYOTA</option>
+                                <option value="FORD">FORD</option>
+                                <option value="VW">VW</option>
+                                <option value="FIAT">FIAT</option>
+                                <option value="AUDI">AUDI</option>
+                                <option value="BMW">BMW</option>
+                                <option value="CHEVROLET">CHEVROLET</option>
+                                <option value="FERRARI">FERRARI</option>
+                                <option value="HONDA">HONDA</option>
+                            </select>
+                        </InputGroup>
+{/* 
+                        <InputGroup>
+                            <label htmlFor="marca_nome">Nome da Marca</label>
                             <input id="marca_nome" 
                                     type="text" 
-                                    value={marca} 
+                                    value={marca_nome} 
                                     placeholder="TOYOTA" 
                                     onChange={marcaHandler} 
                             />
                         </InputGroup>
-                        
+                         */}
                         <InputGroup>
                             <label htmlFor="ano">Ano do modelo</label>
                             <input id="ano" 
@@ -89,7 +104,7 @@ export default function FormModal(){
                                     type="number" 
                                     min="1" 
                                     max="6" 
-                                    value={portas} 
+                                    value={num_portas} 
                                     placeholder="4" 
                                     onChange={portasHandler} 
                             />
@@ -98,7 +113,7 @@ export default function FormModal(){
                         <InputGroup>
                             <label htmlFor="valor_fipe">Valor Fipe</label>
                             <input id="valor_fipe" 
-                                    type="text" 
+                                    type="number" 
                                     value={valor_fipe} 
                                     placeholder="50000" 
                                     onChange={fipeHandler} 
@@ -114,14 +129,8 @@ export default function FormModal(){
                                     onChange={corHandler} 
                             />
                         </InputGroup>
-                        {/* <InputGroup>
-                            <label htmlFor="cadastro">Data do Cadastro</label>
-                            <input id="cadastro"  
-                                    type="hiden"
-                                    value={cadastro}  
-                                    onChange={cadastroHandler} 
-                            />
-                        </InputGroup> */}
+
+
                     </FormMain>
 
                     <Footer>  {/* button  */} 

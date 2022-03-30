@@ -92,6 +92,17 @@ export const InputGroup = styled.div`
         font-size: 18px;
         font-weight: 500;
     }
+    select {
+        border: none;
+        color: #1e1e1e;
+        background: #f5f5f5;
+        border-radius: 5px;
+
+        height: 30px;
+        width: 100%;
+        padding-left: 10px;
+        text-align: left;
+    }
     input {
         border: none;
         color: #1e1e1e;

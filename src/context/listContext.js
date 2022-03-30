@@ -10,9 +10,6 @@ export function CarContextProvider( {children} ) {
 
     const { mutate } = useAxios("carros")
 
-
-
-    const timestamp = Math.floor(Date.now() / 1000)
       
 
 
@@ -29,12 +26,12 @@ export function CarContextProvider( {children} ) {
     const [num_portas, setNumPortas] = useState('');
     const [valor_fipe, setValor_fipe] = useState('');
     const [cor, setCor] = useState('');
-    const [timestamp_cadastro, setTimestamp_cadastro] = useState(timestamp);
+    const [timestamp_cadastro, setTimestamp_cadastro] = useState('');
 
     
 
-    
-    function handleEdit (id, marca_id, marca_nome,nome_modelo, ano, combustivel, num_portas, valor_fipe, cor, timestamp_cadastro) {
+        ///// SETO O ESTADO DO INPUT COM OS VALORES 
+    function handleEdit (id, marca_id, marca_nome,nome_modelo, ano, combustivel, num_portas, valor_fipe, cor) {
         
         setId(id);
         setIMarcaId(marca_id);
@@ -45,7 +42,9 @@ export function CarContextProvider( {children} ) {
         setNumPortas(num_portas);
         setValor_fipe(valor_fipe);
         setCor(cor);
-        setTimestamp_cadastro(timestamp_cadastro);
+
+
+        // setTimestamp_cadastro(timestamp_cadastro);
         
         setOpenFormModal(true);
 
@@ -55,16 +54,45 @@ export function CarContextProvider( {children} ) {
     //MODAL
     //// abre o modal
     function handleAdd() {
+
+        if(marca_nome === "TOYOTA") {
+            setIMarcaId(1)
+        }
+
+        const timestamp = Math.floor(Date.now() / 1000)
+
+        setTimestamp_cadastro(timestamp);
+
         setOpenFormModal(true); //no evento clic do botão adc ele fica true e traz o modal
     }
+
     //// fecha o modal
+    //// ao clicar no butto Close, o estado é zerado!
     function handleClose() {
-        if(nome_modelo) {
-            setNome_Modelo("")
+        if(id) {  // se exixtir um id, então zere todos os estados deste id ao clicar no botão
+            setId("");
+            setIMarcaId("");
+            setNome_Modelo("");
+            setMarca_nome("");
+            setAno("");
+            setCombustivel("");
+            setNumPortas("");
+            setValor_fipe("");
+            setCor("");
+            setTimestamp_cadastro("")
+        }else {  //caso seja fechado sem valores
+            setId("");
+            setIMarcaId("");
+            setNome_Modelo("");
+            setMarca_nome("");
+            setAno("");
+            setCombustivel("");
+            setNumPortas("");
+            setValor_fipe("");
+            setCor("");
+            setTimestamp_cadastro("")
         }
-        if (marca_nome) {
-            setMarca_nome("")
-        }
+
         setOpenFormModal(false); // no evento do clic do modal ele executa passa para false
     }
 
@@ -74,10 +102,30 @@ export function CarContextProvider( {children} ) {
 
     ///// ESTADO DO INPUT
     function modeloHandler (event){
-        setNome_Modelo(event.target.value)
+        setNome_Modelo(event.target.value) //CAPTURA E ENVIA O VALOR DO ESTADO DO EVENTO 
     }
     function marcaHandler (event){
-        setMarca_nome(event.target.value)
+        if(event.target.value === "TOYOTA") {
+            setIMarcaId(1)
+        }else if(event.target.value === "FORD" ){
+            setIMarcaId(2)
+        }else if(event.target.value === "VW" ){
+            setIMarcaId(3)
+        }else if(event.target.value === "FIAT" ){
+            setIMarcaId(4)
+        }else if(event.target.value === "AUDI" ){
+            setIMarcaId(5)
+        }else if(event.target.value === "BMW" ){
+            setIMarcaId(6)
+        }else if(event.target.value === "CHEVROLET" ){
+            setIMarcaId(7)
+        }else if(event.target.value === "FERRARI" ){
+            setIMarcaId(8)
+        }else if(event.target.value === "HONDA" ){
+            setIMarcaId(9)
+        }else {}
+    setMarca_nome(event.target.value)
+        
     }
     function anoHandler (event){
         setAno(event.target.value)
@@ -94,6 +142,7 @@ export function CarContextProvider( {children} ) {
     function corHandler (event){
         setCor(event.target.value)
     }
+    
 
 
     //METHODS
@@ -118,6 +167,7 @@ export function CarContextProvider( {children} ) {
     function handleSubmit (event){
         event.preventDefault();
         
+        //valor que quero passar no submmit
         const carros = {
             id, marca_id, nome_modelo, marca_nome, ano, combustivel, num_portas, valor_fipe, cor, timestamp_cadastro,
         } 
@@ -129,8 +179,12 @@ export function CarContextProvider( {children} ) {
             //method POST
             Api.post("carros",carros);
         }
-      
-       setOpenFormModal(false);
+
+
+
+
+        setOpenFormModal(false);
+ 
     }
     
     
