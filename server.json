@@ -10,71 +10,71 @@
       "num_portas": 4,
       "valor_fipe": 70,
       "cor": "Azul",
-      "timestamp_cadastro": 1636636150
+      "timestamp_cadastro": 1636599600
     },
     {
       "id": 2,
       "marca_id": 2,
-      "marca_nome": "FORD",
       "nome_modelo": "Ka",
+      "marca_nome": "FORD",
       "ano": 2015,
       "combustivel": "flex",
       "num_portas": 4,
       "valor_fipe": 50,
       "cor": "Verde",
-      "timestamp_cadastro": 1636636150
+      "timestamp_cadastro": 1636599600
     },
     {
       "id": 3,
       "marca_id": 3,
-      "marca_nome": "VW",
       "nome_modelo": "VOYAGE",
+      "marca_nome": "VW",
       "ano": 2012,
       "combustivel": "flex",
       "num_portas": 4,
       "valor_fipe": 34.4,
       "cor": "Preta",
-      "timestamp_cadastro": 1636636150
+      "timestamp_cadastro": 1636599600
     },
     {
       "id": 4,
       "marca_id": 4,
-      "marca_nome": "FIAT",
       "nome_modelo": "Uno Mille",
+      "marca_nome": "FIAT",
       "ano": 2000,
       "combustivel": "gasolina",
       "num_portas": 2,
       "valor_fipe": 10.1,
       "cor": "Branca",
-      "timestamp_cadastro": 1605100230
+      "timestamp_cadastro": 1605063600
     },
     {
-      "marca_id": 5,
-      "marca_nome": "TOYOTA",
+      "id": 5,
+      "marca_id": 1,
       "nome_modelo": "COROLLA XEI",
+      "marca_nome": "TOYOTA",
       "ano": 2016,
       "combustivel": "flex",
       "num_portas": 4,
       "valor_fipe": 70,
       "cor": "Azul",
-      "timestamp_cadastro": 1636636150,
-      "id": 5
+      "timestamp_cadastro": 1636599600
     },
     {
       "id": 6,
       "marca_id": 5,
-      "nome_modelo": "COROLLA",
+      "nome_modelo": "A3",
       "marca_nome": "AUDI",
       "ano": "2004",
       "combustivel": "gasolina",
       "num_portas": 2,
       "valor_fipe": "50000",
       "cor": "azul",
-      "timestamp_cadastro": 1636636150
+      "timestamp_cadastro": 1636599600
     },
     {
       "id": 7,
-      "marca_id": 0,
+      "marca_id": 1,
       "nome_modelo": "COROLLA",
       "marca_nome": "TOYOTA",
       "ano": "2004",
@@ -82,7 +82,7 @@
       "num_portas": 2,
       "valor_fipe": "50000",
       "cor": "azul",
-      "timestamp_cadastro": 1636636150
+      "timestamp_cadastro": 1636599600
     },
     {
       "id": 12,
@@ -107,6 +107,18 @@
       "valor_fipe": "12",
       "cor": "BRANCO",
       "timestamp_cadastro": 1636599600
+    },
+    {
+      "id": 14,
+      "marca_id": 4,
+      "nome_modelo": "Uno Mille",
+      "marca_nome": "FIAT",
+      "ano": "2001",
+      "combustivel": "Alcool",
+      "num_portas": "2",
+      "valor_fipe": "500",
+      "cor": "branco",
+      "timestamp_cadastro": 1648695600
     }
   ]
 }
