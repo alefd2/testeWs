@@ -3,6 +3,8 @@ import React from 'react';
 import { useAxios } from '../../hooks/useAxios'
 
 import { CarAdd } from '../CarAdd'; //componente externo
+
+
 import {Car} from '../Car';
 
 import { ContainerCarList, CarListWrapper } from './style';
@@ -10,18 +12,19 @@ import { ContainerCarList, CarListWrapper } from './style';
 // Este componente apresenta a lista de resultados
 
 export function CarList() { 
+
+    
     
     const { data } = useAxios('carros');
-    // console.log(data);
     
+    
+
+
     return(
  
         <ContainerCarList>   {/* <div className='container' */}
-        
-        
+             
             <CarAdd />   {/* Add car Button that open modal of inputs */}
-
-
 
             <CarListWrapper> {/*  <table> */}
             
@@ -55,7 +58,7 @@ export function CarList() {
                                 cor={carro.cor}
 
                                 // // data e hora
-                                // timestamp_cadastro= {(new Date(carro.timestamp_cadastro * 1000).toISOString().slice(0, 19).replace('T', ' '))} 
+                                // timestamp_cadastro= {new Date(carro.timestamp_cadastro * 1000).toISOString().slice(0, 19).replace('T', ' ')} 
 
                                 // Somente a Data
                                 timestamp_cadastro= {new Date(carro.timestamp_cadastro * 1000).toLocaleDateString("pt-BR")}  

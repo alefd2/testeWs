@@ -3,8 +3,8 @@
     {
       "id": 1,
       "marca_id": 1,
-      "marca_nome": "TOYOTA",
       "nome_modelo": "COROLLA XEI",
+      "marca_nome": "TOYOTA",
       "ano": 2016,
       "combustivel": "flex",
       "num_portas": 4,
@@ -62,6 +62,18 @@
     },
     {
       "id": 6,
+      "marca_id": 5,
+      "nome_modelo": "COROLLA",
+      "marca_nome": "AUDI",
+      "ano": "2004",
+      "combustivel": "gasolina",
+      "num_portas": 2,
+      "valor_fipe": "50000",
+      "cor": "azul",
+      "timestamp_cadastro": 1636636150
+    },
+    {
+      "id": 7,
       "marca_id": 0,
       "nome_modelo": "COROLLA",
       "marca_nome": "TOYOTA",
@@ -73,112 +85,28 @@
       "timestamp_cadastro": 1636636150
     },
     {
-      "marca_id": 0,
-      "marca_nome": "TOYOTA",
-      "nome_modelo": "COROLLA",
-      "ano": "2004",
-      "combustivel": "gasolina",
-      "num_portas": 2,
-      "valor_fipe": "50000",
-      "cor": "azul",
-      "timestamp_cadastro": 1641477686,
-      "id": 7
-    },
-    {
-      "marca_id": 0,
-      "marca_nome": "TOYOTA",
-      "nome_modelo": "COROLLA",
-      "ano": "2004",
-      "combustivel": "gasolina",
-      "num_portas": 2,
-      "valor_fipe": "50000",
-      "cor": "azul",
-      "timestamp_cadastro": 1641477686,
-      "id": 8
-    },
-    {
-      "marca_id": 0,
-      "marca_nome": "TOYOTA",
-      "nome_modelo": "COROLLA",
-      "ano": "2004",
-      "combustivel": "gasolina",
-      "num_portas": 2,
-      "valor_fipe": "50000",
-      "cor": "azul",
-      "timestamp_cadastro": 1641477686,
-      "id": 9
-    },
-    {
-      "id": 10,
-      "marca_id": "",
-      "nome_modelo": "sadfasd",
-      "marca_nome": "asdfasdfa",
-      "ano": "1903",
-      "combustivel": "asdfasd",
-      "num_portas": "3",
-      "valor_fipe": "50000",
-      "cor": "asdfasdf",
-      "timestamp_cadastro": 1641477686
-    },
-    {
       "id": 12,
-      "marca_id": "",
-      "nome_modelo": "sadfasdf",
-      "marca_nome": "asdfasd",
-      "ano": "2050",
-      "combustivel": "312312",
-      "num_portas": "1",
-      "valor_fipe": "13123",
-      "cor": "123123",
-      "timestamp_cadastro": 1648655045
+      "marca_id": 5,
+      "nome_modelo": "mudei",
+      "marca_nome": "AUDI",
+      "ano": "2020",
+      "combustivel": "gasolina",
+      "num_portas": "4",
+      "valor_fipe": "5000",
+      "cor": "verde",
+      "timestamp_cadastro": 1636636150
     },
     {
       "id": 13,
-      "marca_id": "",
-      "nome_modelo": "alef",
-      "marca_nome": "123132",
-      "ano": "1901",
-      "combustivel": "123",
-      "num_portas": "4",
-      "valor_fipe": "13",
-      "cor": "13",
-      "timestamp_cadastro": 1648659222
-    },
-    {
-      "id": 14,
-      "marca_id": "",
-      "nome_modelo": "alaef",
-      "marca_nome": "asdfasd",
-      "ano": "2020",
-      "combustivel": "gasolina",
-      "num_portas": "4",
-      "valor_fipe": "5050",
-      "cor": "branco",
-      "timestamp_cadastro": 1648660762
-    },
-    {
-      "id": 15,
-      "marca_id": "",
-      "nome_modelo": "COROLA",
-      "marca_nome": "FORD",
-      "ano": "2022",
-      "combustivel": "GAS",
-      "num_portas": "2",
-      "valor_fipe": "5000",
-      "cor": "BRA",
-      "timestamp_cadastro": 1648661876
-    },
-    {
-      "id": 16,
       "marca_id": 1,
-      "nome_modelo": "aqui",
+      "nome_modelo": "COROLA",
       "marca_nome": "TOYOTA",
-      "ano": "2020",
-      "combustivel": "gasolina",
-      "num_portas": "5",
-      "valor_fipe": "500",
-      "cor": "branco",
-      "timestamp_cadastro": 1648664560
+      "ano": "2010",
+      "combustivel": "GASOLINA",
+      "num_portas": "3",
+      "valor_fipe": "12",
+      "cor": "BRANCO",
+      "timestamp_cadastro": 1636599600
     }
   ]
 }

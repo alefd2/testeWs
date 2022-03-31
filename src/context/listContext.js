@@ -8,7 +8,7 @@ export const CarContext = createContext();
 
 export function CarContextProvider( {children} ) {
 
-    const { mutate } = useAxios("carros")
+    const { data, mutate } = useAxios("carros")
 
       
 
@@ -30,8 +30,10 @@ export function CarContextProvider( {children} ) {
 
     
 
-        ///// SETO O ESTADO DO INPUT COM OS VALORES 
-    function handleEdit (id, marca_id, marca_nome,nome_modelo, ano, combustivel, num_portas, valor_fipe, cor) {
+    ///MODAL
+
+        ///// EVENTO DE EDITAR 
+    function handleEdit (id, marca_id, marca_nome,nome_modelo, ano, combustivel, num_portas, valor_fipe, cor, timestamp_cadastro) {
         
         setId(id);
         setIMarcaId(marca_id);
@@ -42,8 +44,14 @@ export function CarContextProvider( {children} ) {
         setNumPortas(num_portas);
         setValor_fipe(valor_fipe);
         setCor(cor);
+        
+        var myDate = timestamp_cadastro;
+        myDate = myDate.split("/");
+        var newDate = new Date( myDate[2], myDate[1] - 1, myDate[0]);
 
 
+        // const alef = Date.parse(timestamp_cadastro).toString()
+        setTimestamp_cadastro(Math.floor(newDate.getTime() / 1000))
         // setTimestamp_cadastro(timestamp_cadastro);
         
         setOpenFormModal(true);
@@ -51,23 +59,39 @@ export function CarContextProvider( {children} ) {
     }
 
 
-    //MODAL
-    //// abre o modal
+        /////EVENTO DE ADCIONAR 
     function handleAdd() {
 
-        if(marca_nome === "TOYOTA") {
-            setIMarcaId(1)
+        if(!id) {  // se exixtir um id, então zere todos os estados deste id ao clicar no botão
+            setIMarcaId("");
+            setNome_Modelo("");
+            setMarca_nome("");
+            setAno("");
+            setCombustivel("");
+            setNumPortas("");
+            setValor_fipe("");
+            setCor("");
+            const timestamp = Math.floor(Date.now() / 1000)
+            setTimestamp_cadastro(timestamp);
+        } else {
+            setIMarcaId("");
+            setNome_Modelo("");
+            setMarca_nome("");
+            setAno("");
+            setCombustivel("");
+            setNumPortas("");
+            setValor_fipe("");
+            setCor("");
+            const timestamp = Math.floor(Date.now() / 1000)
+            setTimestamp_cadastro(timestamp);
         }
 
-        const timestamp = Math.floor(Date.now() / 1000)
 
-        setTimestamp_cadastro(timestamp);
 
         setOpenFormModal(true); //no evento clic do botão adc ele fica true e traz o modal
     }
 
-    //// fecha o modal
-    //// ao clicar no butto Close, o estado é zerado!
+    // EVENTO DE FECHAR
     function handleClose() {
         if(id) {  // se exixtir um id, então zere todos os estados deste id ao clicar no botão
             setId("");
@@ -148,22 +172,20 @@ export function CarContextProvider( {children} ) {
     //METHODS
 
     
-    /////DELETE
+    /////DELETE 
     function handleDelete(id) {
         Api.delete(`carros/${id}`);
 
         //substitui o data na tela
-        mutate();
-
-        //lógica para usar mutate complexo retornando o estado do valor novo (os valores restantes)
-        // const updatedCars = {
-        //     carros: data?.filter( (data) => data.id !== id)
-        // }
-
+        
+        //SWR - PASSO 
+        const updatedCars = data?.filter( (data) => data.id !== id)
+        
+        mutate(updatedCars, false);
        
     }
 
-    // botão executa 
+    // SUBMMIT
     function handleSubmit (event){
         event.preventDefault();
         
@@ -175,15 +197,28 @@ export function CarContextProvider( {children} ) {
         if(id){
             //method PUT
             Api.put(`carros/${id}`, carros);
+            
+            const updatedCars = data?.map( (data) => {
+                if(data.id === id) {
+                    return {...data, id, marca_id, nome_modelo, marca_nome, ano, combustivel, num_portas, valor_fipe, cor,timestamp_cadastro}
+                }
+                return data
+            })
+        
+            mutate(updatedCars, false);
+            
         }else {
             //method POST
             Api.post("carros",carros);
+            
+            const updatedCars = [...data, carros]
+
+            mutate(updatedCars, false);
+
         }
 
-
-
-
         setOpenFormModal(false);
+      
  
     }
     
