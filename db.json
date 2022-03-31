@@ -95,30 +95,6 @@
       "valor_fipe": "5000",
       "cor": "verde",
       "timestamp_cadastro": 1636636150
-    },
-    {
-      "id": 13,
-      "marca_id": 1,
-      "nome_modelo": "COROLA",
-      "marca_nome": "TOYOTA",
-      "ano": "2010",
-      "combustivel": "GASOLINA",
-      "num_portas": "3",
-      "valor_fipe": "12",
-      "cor": "BRANCO",
-      "timestamp_cadastro": 1636599600
-    },
-    {
-      "id": 14,
-      "marca_id": 4,
-      "nome_modelo": "Uno Mille",
-      "marca_nome": "FIAT",
-      "ano": "2001",
-      "combustivel": "Alcool",
-      "num_portas": "2",
-      "valor_fipe": "500",
-      "cor": "branco",
-      "timestamp_cadastro": 1648695600
     }
   ]
 }

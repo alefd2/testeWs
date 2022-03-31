@@ -6,11 +6,12 @@ import { CarContextProvider } from './context/listContext'
 function App() {
   return (
     <>
-    
-      <CarContextProvider>
+      {/*   CONTEXT OF APP   */}
+      <CarContextProvider> 
           <Layout />
       </CarContextProvider>
 
+      
       <GlobalStyle /> 
 
     </>
