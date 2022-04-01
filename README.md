@@ -50,7 +50,7 @@ No Yarn
 yarn install
 ```
 
-No Yarn
+No Npm
 
 ```jsx
 npm instal
