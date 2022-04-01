@@ -66,7 +66,7 @@ npm instal
 
 **Bild Local**
 
-Obs: Ao usar na máquina local, algumas alterações devem ser feitas pois foram adções de arquivos para o deploy no heroku: 
+Obs: Ao usar na máquina local, algumas alterações devem ser feitas pois foram adições de arquivos para o deploy no heroku: 
 
 - O arquivo 📄server.js deve ser excluído
 - Na no arquivo “services/axiosConfig” altere  `“baseURL: [ttps://testecarws.herokuapp.com/](https://testecarws.herokuapp.com/)”` pelo [`http://localhost:3333/`](http://localhost:3333/) ou a porta padrão do seu banco de dados.
