@@ -59,7 +59,7 @@ export function CarContextProvider( {children} ) {
     }
 
 
-        /////EVENTO DE ADCIONAR 
+        /////EVENTO 
     function handleAdd() {
 
         if(!id) {  // se exixtir um id, então zere todos os estados deste id ao clicar no botão
