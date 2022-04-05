@@ -32,7 +32,7 @@ para adcionar mais marcas é preciso ir no código fonte
 
 - **JavaScript**
 - **yarn**
-- **ReactJS** - Instalação: `yarn create react-app listcar --teamplate`
+- **ReactJS** - Instalação: `yarn create react-app listcar`
 - **json-server** - Istalação: `yarn add json-server`
 
 - **swr** - Instalação: `yarn add swr`
