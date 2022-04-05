@@ -53,7 +53,7 @@ yarn install
 No Npm
 
 ```jsx
-npm instal
+npm install
 ```
 
 # Build do projeto
