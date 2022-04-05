@@ -56,7 +56,7 @@ No Npm
 npm instal
 ```
 
-# Bild do projeto
+# Build do projeto
 
 ---
 
